@@ -226,7 +226,16 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
+  let elem = document.querySelectorAll('.div-11');
 
+  let i = 0;
+  let out = '';
+  while (i < elem.length) {
+    out += elem[i].textContent + '_';
+    i++;
+  }
+
+  document.querySelector('.out-11').textContent = out;
 }
 
 document.querySelector('.b-11').onclick = t11;
@@ -239,6 +248,13 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
+  let elem = document.querySelectorAll('div.div-12');
+  let i = 0;
+  let out = '';
+  while (i < elem.length) {
+    elem[i].style.background = 'orange';
+    i++;
+  }
 
 }
 
@@ -251,7 +267,12 @@ document.querySelector('.b-12').onclick = t12;
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
 function t13() {
-
+  let elem = document.querySelectorAll('input.i-13');
+  let i = 0;
+  while (i < elem.length) {
+    elem[i].value = i + 1;
+    i++;
+  }
 }
 
 document.querySelector('.b-13').onclick = t13;
@@ -264,7 +285,16 @@ document.querySelector('.b-13').onclick = t13;
 
 
 function t14() {
-
+  let elem = document.querySelectorAll('input.i-14');
+  let i = 0;
+  let out = '';
+  while (i < elem.length) {
+    if (elem[i].checked) {
+      out = elem[i].value;
+    }
+    i++;
+  }
+  document.querySelector('.out-14').textContent = out;
 }
 
 document.querySelector('.b-14').onclick = t14;
@@ -275,6 +305,18 @@ document.querySelector('.b-14').onclick = t14;
 // Для вывода использовать цикл  while. Разделитель подчеркивание.
 
 function t15() {
+  let i = 0,
+    out = '';
+  while (i < 3) {
+    let max = 99,
+      min = 77;
+    while (min < max + 11) {
+      out += min + '_';
+      min = min + 11;
+    }
+    i++;
+  }
+  document.querySelector('.out-15').textContent = out;
 
 }
 
