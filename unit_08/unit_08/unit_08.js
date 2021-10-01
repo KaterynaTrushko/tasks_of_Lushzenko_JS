@@ -178,8 +178,9 @@ document.querySelector('.b-8').onclick = t8;
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку и при необходимости поменять местами значения в переменных местами, а потом запускаем цикл  while.
 
 function t9() {
-  let a = document.querySelector('.i-91').value;
-  let b = document.querySelector('.i-92').value;
+  let a = +document.querySelector('.i-91').value;
+  let b = +document.querySelector('.i-92').value;
+  let out = '';
   let max, min;
   if (a > b) {
     max = a;
@@ -188,8 +189,8 @@ function t9() {
     max = b;
     min = a;
   }
-  out = '';
-  while (min < max) {
+  
+  while (min < max + 1) {
     out += min + '_';
     min++;
   }
