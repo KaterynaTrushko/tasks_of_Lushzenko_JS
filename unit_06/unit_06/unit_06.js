@@ -52,7 +52,7 @@ document.querySelector('.b-2').onclick = t2;
 
 // <p>Решить задачу с помощью вложенных циклов. Внутренний цикл выводит *_,  внешний цикл выводит перенос строки br.</p>
 function t3() {
-  let out ="";
+  let out = "";
   for (let i = 0; i < 3; i++){
     for (let k = 0; k < 3; k++){
       out += "*_"

@@ -384,10 +384,10 @@ let ar19 = [15, 424, 313, 78, 241, 4, 45, 67];
 
 function f19() {
     let min = ar19[0];
-    for(let i = 0; i < ar19.length; i++){
-        if(ar19[i] < ar19[0]){
+    for (let i = 0; i < ar19.length; i++) {
+        if (ar19[i] < min) {
             min = ar19[i];
-        } 
+        }
     }
     document.querySelector('.out-19').textContent = min;
 }
@@ -404,7 +404,7 @@ let ar20 = [4, 5, 6, 7, 8, 9, 10];
 
 function f20() {
     let out = 0;
-    for(let i = 1; i < ar20.length; i++){
+    for (let i = 1; i < ar20.length; i++) {
         out += ar20[i];
     }
     document.querySelector('.out-20').textContent = out;
