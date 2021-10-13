@@ -145,11 +145,13 @@ document.querySelector('.b-7').onclick = () => {
 let a8 = [3, 14, 15, 92, 7, 32, 59];
 
 function t8() {
-    a8_res = a8.filter(function (elem, index) {
-        if (index % 2 === 0) {
-            return true;
+    let a8_res = [];
+    a8.forEach((elem, ind) => {
+        if (elem % 2 === 0) {
+            a8_res.push(ind);
         }
     })
+
     return a8_res;
 }
 
@@ -326,17 +328,15 @@ let a15 = [{
 
 function t15() {
     
-    for(let item of a15){
-        for (let key in item) {
-            if (key == "pnum" && item[key].length > 6 ) {
-                a15_res.push(item);                
-                }
-            }
-        }
-        return a15_res;
+
+       a15_res =  a15.filter(item => {
+         if (item.pnum.length === 6) return true;
+          
+        })
+    
+        return a15_res
     }
-
-
-document.querySelector('.b-15').onclick = () => {
-    console.log(t15());
-}
+    
+    document.querySelector('.b-15').onclick = () => {
+        console.log(t15());
+    }
